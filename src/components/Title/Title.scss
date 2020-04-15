@@ -1,0 +1,52 @@
+@import "../../assets/styles/variable";
+
+.title__ {
+  &container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &title {
+    font-family: "Pokemon Hollow";
+    font-size: 3.5rem;
+    letter-spacing: 7px;
+    margin-block-start: -0.5em;
+    margin-block-end: -0.5em;
+    color: $white;
+    text-shadow: 2px 2px 10px $black;
+  }
+
+  &subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: $detailYellow;
+    text-shadow: 2px 2px 10px $black;
+  }
+}
+
+// @media (max-width: $tablet-medium) {
+//   .container {
+//     width: 70%;
+//   }
+// }
+
+// @media (max-width: $tablet-small) {
+//   .container {
+//     width: 80%;
+//   }
+//   .title {
+//     font-size: 2rem;
+//   }
+//   .subtitle {
+//     font-size: 1rem;
+//   }
+// }
+
+// @media (max-width: $phone) {
+//   .container {
+//     width: 90%;
+//   }
+// }

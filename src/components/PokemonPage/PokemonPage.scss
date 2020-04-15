@@ -1,0 +1,196 @@
+@import "../../assets/styles/variable";
+
+.pokemonPage__contauner > body {
+  overflow: hidden;
+}
+
+.pokemonPage__ {
+  &container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($color: $black, $alpha: 0.3);
+  }
+
+  &wrapper {
+    width: 60%;
+    margin: 2% 0;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    border-radius: 25px;
+    box-shadow: 3px 5px 16px rgba($color: $poison, $alpha: 0.5);
+    @media (max-width: $phone) {
+      width: 80%;
+    }
+  }
+
+  &type-wrapper {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $tablet-medium) {
+      width: 45%;
+    }
+
+    @media (max-width: $tablet-small) {
+      width: 60%;
+    }
+
+    @media (max-width: $phone) {
+      width: 80%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &btn-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &type {
+    color: $white;
+    width: 50px;
+    padding: 5px 10px;
+    background-color: $gray;
+    border-radius: 10px;
+    text-align: center;
+
+    @media (max-width: $phone) {
+      margin: 5px 0;
+    }
+  }
+
+  &ability-wrapper {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: $tablet-medium) {
+      width: 60%;
+    }
+
+    @media (max-width: $tablet-small) {
+      width: 80%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: $phone) {
+    }
+  }
+
+  &ability {
+    color: $white;
+    min-width: 50px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: $gray;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  &stats-wrapper {
+    display: grid;
+    grid-template-areas: "a a";
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    width: 100%;
+
+    @media (max-width: $tablet-small) {
+      display: grid;
+      grid-template-areas: "a";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &stats {
+    transform: translateX(20%);
+
+    &-text {
+      font-size: 1.125rem;
+      padding: 5px 0;
+    }
+  }
+}
+
+.grass {
+  background-color: $grass;
+}
+
+.poison {
+  background-color: $poison;
+}
+
+.psychic {
+  background-color: $psychic;
+}
+
+.ground {
+  background-color: $ground;
+}
+
+.ice {
+  background-color: $ice;
+}
+
+.fire {
+  background-color: $fire;
+}
+
+.rock {
+  background-color: $rock;
+}
+
+.dragon {
+  background-color: $dragon;
+}
+
+.water {
+  background-color: $water;
+}
+
+.bug {
+  background-color: $bug;
+}
+
+.dark {
+  background-color: $dark;
+}
+
+.fighting {
+  background-color: $fighting;
+}
+
+.ghost {
+  background-color: $ghost;
+}
+
+.steel {
+  background-color: $steel;
+}
+
+.flying {
+  background-color: $flying;
+}
+
+.electric {
+  background-color: $electric;
+}
+
+.fairy {
+  background-color: $fairy;
+}

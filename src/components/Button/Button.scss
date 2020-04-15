@@ -1,0 +1,51 @@
+@import "../../assets/styles/variable";
+
+.btn {
+  min-width: 100px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 20px;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 15px;
+  text-transform: uppercase;
+  background-color: $gray;
+  color: $white;
+  cursor: pointer;
+  transition: 0.4s ease background-color;
+  &:hover {
+    background-color: $darkGray;
+  }
+}
+
+.prev {
+  background-color: $detailBlue;
+  &:hover {
+    background-color: $detailDarkBlue;
+  }
+}
+
+.next {
+  background-color: $detailRed;
+  &:hover {
+    background-color: $detailDarkRed;
+  }
+}
+
+.close {
+  text-transform: uppercase;
+  background-color: $detailBlue;
+  &:hover {
+    background-color: $detailDarkBlue;
+  }
+}
+
+.switch {
+  background-color: $electric;
+  font-size: 0.75rem;
+  outline: none;
+
+  &:hover {
+    background-color: $detailYellow;
+  }
+}

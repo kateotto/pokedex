@@ -1,0 +1,57 @@
+@import "../../assets/styles/variable.scss";
+
+.wrapper__ {
+  &container {
+    background-image: url(../../assets/pattern/main-pattern.png);
+    padding: 0 10%;
+
+    @media (max-width: $tablet-small) {
+      padding: 0 5%;
+    }
+  }
+  &btn {
+    width: 100%;
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &input-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  &input {
+    width: 45%;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+    outline: transparent;
+
+    @media (max-width: $tablet-medium) {
+      width: 60%;
+    }
+
+    @media (max-width: $phone) {
+      width: 80%;
+    }
+  }
+
+  &card {
+    display: grid;
+    grid-template-areas: "a a a";
+    grid-template-rows: 1fr;
+    justify-items: center;
+
+    @media (max-width: $tablet-small) {
+      grid-template-areas: "a a";
+    }
+
+    @media (max-width: $phone) {
+      grid-template-areas: "a";
+    }
+  }
+}

@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.status-container {
+  width: 100%;
+  height: 20px;
+  background-color: gray;
+}
+
+.status-bar {
+  height: inherit;
+  color: white;
+}

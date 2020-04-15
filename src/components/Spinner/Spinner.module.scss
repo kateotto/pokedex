@@ -1,0 +1,30 @@
+@import "../../assets/styles/variable";
+
+.wrapper {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: $detailRed;
+  animation: spinner 1s ease-in-out infinite;
+  -webkit-animation: spinner 1s ease-in-out infinite;
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
