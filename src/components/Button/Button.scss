@@ -32,20 +32,11 @@
   }
 }
 
-.close {
+.close,
+.switch {
   text-transform: uppercase;
   background-color: $detailBlue;
   &:hover {
     background-color: $detailDarkBlue;
-  }
-}
-
-.switch {
-  background-color: $electric;
-  font-size: 0.75rem;
-  outline: none;
-
-  &:hover {
-    background-color: $detailYellow;
   }
 }

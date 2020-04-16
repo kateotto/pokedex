@@ -6,13 +6,13 @@ import StatusBar from "../StatusBar/StatusBar";
 function PokemonPage({ pokemon, onClickHandler }) {
   let sprite = pokemon.sprites;
   const [spritesImage, setSpritesImage] = useState(sprite.front_default);
-  let switcher = true;
+  let isSwitching = true;
   const switching = () => {
-    if (switcher) {
+    if (isSwitching) {
       setSpritesImage(sprite.back_default);
-      switcher = !switcher;
+      isSwitching = !isSwitching;
     } else {
-      switcher = !switcher;
+      isSwitching = !isSwitching;
       setSpritesImage(sprite.front_default);
     }
   };
@@ -27,7 +27,7 @@ function PokemonPage({ pokemon, onClickHandler }) {
     document.body.style.overflowY = "visible";
   };
 
-  const trigger = () => {
+  const toggleSroll = () => {
     onClickHandler();
     showScrollbar();
   };
@@ -84,7 +84,7 @@ function PokemonPage({ pokemon, onClickHandler }) {
             );
           })}
         </div>
-        <Button name="close" onClickHandler={trigger} />
+        <Button name="close" onClickHandler={toggleSroll} />
       </div>
     </div>
   );

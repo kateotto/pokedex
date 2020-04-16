@@ -61,6 +61,10 @@
     flex-direction: row;
   }
 
+  &name {
+    text-transform: uppercase;
+  }
+
   &type {
     color: $white;
     width: 50px;

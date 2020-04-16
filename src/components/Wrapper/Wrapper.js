@@ -9,8 +9,7 @@ function Wrapper() {
   const [pokemonData, setPokemonData] = useState([]);
   const [nextUrl, setNextUrl] = useState("");
   const [prevUrl, setPrevUrl] = useState("");
-
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [filterValue, setFilterValue] = useState("");
   const [apiLimit] = useState(21);
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/?limit=${apiLimit}`;
@@ -23,32 +22,30 @@ function Wrapper() {
     if (!url) {
       return;
     }
-    setLoading(true);
-    let data = await catchAllPokemons(url);
+    setIsLoading(true);
+    const data = await catchAllPokemons(url);
     await loadingPokemon(data.results);
     setNextUrl(data.next);
     setPrevUrl(data.previous);
-    setLoading(false);
+    setIsLoading(false);
   };
 
   const loadingPokemon = async data => {
-    let _pokemonData = await Promise.all(
+    const pokemonDataAsync = await Promise.all(
       data.map(async pokemon => {
-        let pokemonElement = await catchPokemon(pokemon.url);
-        return pokemonElement;
+        return await catchPokemon(pokemon.url);
       })
     );
-    setPokemonData(_pokemonData);
+    setPokemonData(pokemonDataAsync);
   };
 
   const onFilterChange = event => {
-    let inputData = event.target.value;
+    const inputData = event.target.value;
     setFilterValue(inputData);
-    console.log(filterValue);
   };
 
-  let filteredPokemon = pokemonData.filter(item => {
-    let searchedPokemon = item.name
+  const filteredPokemon = pokemonData.filter(item => {
+    const searchedPokemon = item.name
       .toUpperCase()
       .search(filterValue.toUpperCase());
     return searchedPokemon !== -1;
@@ -64,7 +61,7 @@ function Wrapper() {
 
   return (
     <div>
-      {loading ? (
+      {isLoading ? (
         <Spinner />
       ) : (
         <div className="wrapper__container">
