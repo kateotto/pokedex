@@ -16,7 +16,7 @@ function PokemonCard({ pokemon }) {
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
         </div>
         <h2 className="pokemonCard__name">{pokemon.name}</h2>
-        <Button name="SHOW MORE" onClickHandler={invertToggle} />
+        <Button name="detail" onClickHandler={invertToggle} />
       </div>
       {toggleModal ? (
         <PokemonPage pokemon={pokemon} onClickHandler={invertToggle} />

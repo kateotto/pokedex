@@ -38,7 +38,7 @@ function PokemonPage({ pokemon, onClickHandler }) {
         <div className="pokemonPage__image">
           <img src={spritesImage} alt={pokemon.name} />
         </div>
-        <Button name="switch" onClickHandler={switching} />
+        <Button name="rotate" onClickHandler={switching} />
         <h2 className="pokemonPage__name">{pokemon.name}</h2>
         <div className="pokemonPage__info">
           <div>

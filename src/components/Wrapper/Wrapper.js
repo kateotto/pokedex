@@ -87,7 +87,7 @@ function Wrapper() {
               name="search"
               className="wrapper__input"
               onChange={onFilterChange}
-              placeholder="SEARCH"
+              placeholder="search for pokemons"
             />
           </div>
           {filteredPokemon.length > null ? (

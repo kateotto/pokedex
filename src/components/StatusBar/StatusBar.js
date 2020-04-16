@@ -11,7 +11,7 @@ const StatusBar = ({ stats }) => {
           width: base + "%"
         }}
       >
-        <div className="status-text">{base}%</div>
+        <div className="status-text">{base}</div>
       </div>
     </div>
   );

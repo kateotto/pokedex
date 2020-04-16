@@ -30,6 +30,7 @@
     border-radius: 10px;
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
     outline: transparent;
+    text-transform: uppercase;
 
     @media (max-width: $tablet-medium) {
       width: 60%;
